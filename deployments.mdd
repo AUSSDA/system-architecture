@@ -1,9 +1,9 @@
 graph LR
 
 subgraph development [Development]
-    feat([Features]):::iqss --> rel([Release]):::iqss
-    def([Defects]):::iqss  --> rel([Release]):::iqss
-    sec([Security]):::iqss  --> rel([Release]):::iqss
+    feat([Features]):::iqss --- rel([Release]):::iqss
+    def([Defects]):::iqss  --- rel([Release]):::iqss
+    sec([Security]):::iqss  --- rel([Release]):::iqss
 end
 classDef iqss fill:#8080
 
