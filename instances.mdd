@@ -1,0 +1,18 @@
+flowchart TD
+    subgraph zid["ZID Services"]
+        mo{{monitoring}}
+        ba{{backups}}
+   end
+   
+    subgraph int["ZID Hosting"]
+        bu([build]) --- PROD
+        bu([build]) --- TEST
+        bu([build]) --- DOCKER
+    end
+    
+    int --- zid
+
+    subgraph oth["Other"]
+     an[[analytics]] --- PROD
+     an[[analytics]] --- web[[website]]
+    end
